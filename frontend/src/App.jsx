@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import HomePage from './pages/homePage';
 
 const App = () => {
   return(
     <>
-      <p>fffff</p>
+      <HomePage />
     </>
   )
 }
