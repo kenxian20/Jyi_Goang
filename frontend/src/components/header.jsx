@@ -41,7 +41,27 @@ const List = styled.ul`
         margin-right: 50px;
         font-size: 1.3125rem;
         font-weight: 600;
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: black;
+            bottom: -2px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     }
+    
 `;
 const Header = () => {
     return (
